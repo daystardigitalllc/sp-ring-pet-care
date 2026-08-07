@@ -24,7 +24,7 @@ const { navLinksOverride, ctaTextOverride, ctaHrefOverride } = Astro.props;
 
 const links: NavLink[] = navLinksOverride || contentData.navbarPill?.links || [];
 const ctaText = ctaTextOverride || businessData.mainCta || 'Get a Quote';
-const ctaHref = ctaHrefOverride || '#quote-funnel';
+const ctaHref = ctaHrefOverride || '#';
 
 const uid = `navpill-${Math.random().toString(36).slice(2, 9)}`;
 ---
@@ -61,6 +61,7 @@ const uid = `navpill-${Math.random().toString(36).slice(2, 9)}`;
 
       <a
         href={ctaHref}
+        data-open-booking
         class="hidden md:inline-flex items-center justify-center ml-auto px-4 py-2 rounded-full text-sm font-semibold text-white bg-primary hover:bg-primary-hover transition-colors shrink-0"
       >
         {ctaText}
@@ -85,7 +86,7 @@ const uid = `navpill-${Math.random().toString(36).slice(2, 9)}`;
           {link.label}
         </a>
       ))}
-      <a href={ctaHref} class="mt-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-center text-white bg-primary">
+      <a href={ctaHref} data-open-booking class="mt-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-center text-white bg-primary">
         {ctaText}
       </a>
     </div>

@@ -23,24 +23,13 @@ const tagline = taglineOverride || contentData.footerBigText?.tagline || '';
       </p>
     )}
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-12 pb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 pb-16">
       <div class="space-y-4">
         <h4 class="font-bold text-white text-sm uppercase tracking-wider">Services</h4>
         <ul class="space-y-2 text-sm">
           {contentData.services.map((service) => (
             <li>
-              <a href={`/services/${service.slug}`} class="hover:text-white transition-colors">{service.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div class="space-y-4">
-        <h4 class="font-bold text-white text-sm uppercase tracking-wider">Locations</h4>
-        <ul class="space-y-2 text-sm">
-          {businessData.locations.map((loc) => (
-            <li>
-              <a href={`/locations/${loc.toLowerCase().replace(/ /g, '-')}`} class="hover:text-white transition-colors">{loc}</a>
+              <a href="/#services-chalet" class="hover:text-white transition-colors">{service.title}</a>
             </li>
           ))}
         </ul>

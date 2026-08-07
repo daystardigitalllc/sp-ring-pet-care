@@ -10,10 +10,9 @@
   "navbarPill": {
     "links": [
       { "label": "Home", "href": "/" },
-      { "label": "Services", "href": "/services" },
-      { "label": "Locations", "href": "/locations" },
-      { "label": "Reviews", "href": "/#reviews" },
-      { "label": "Pricing", "href": "/#pricing-table" },
+      { "label": "Services", "href": "/#services-chalet" },
+      { "label": "Reviews", "href": "/#reviews-chalet" },
+      { "label": "Pricing", "href": "/#pricing" },
       { "label": "Contact", "href": "/#info" }
     ]
   },
