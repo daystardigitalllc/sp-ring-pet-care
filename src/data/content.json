@@ -12,7 +12,7 @@
       { "label": "Home", "href": "/" },
       { "label": "Services", "href": "/services" },
       { "label": "Locations", "href": "/locations" },
-      { "label": "Reviews", "href": "/#reviews-chalet" },
+      { "label": "Reviews", "href": "/#reviews" },
       { "label": "Pricing", "href": "/#pricing-table" },
       { "label": "Contact", "href": "/#info" }
     ]
@@ -34,7 +34,7 @@
     },
     "servicesChalet": {
       "badge": "What We Provide",
-      "title": "Bespoke Pet Care Services",
+      "title": "Our Pet Care Services",
       "subtitle": "Tailored care plans for dogs, cats, and all members of your furry family.",
       "items": [
         {
@@ -78,19 +78,19 @@
         {
           "name": "Ariana Cruz",
           "avatar": "AC",
-          "quote": "“We couldn’t be happier with Sara! She took such amazing care of our pup while we were away! Lots of walks, playtime, and sweet updates that gave us total peace of mind. Highly recommend!”",
+          "quote": "We couldn't be happier with Sara! She took such amazing care of our pup while we were away! Lots of walks, playtime, and sweet updates that gave us total peace of mind. Highly recommend!",
           "stars": 5
         },
         {
           "name": "Krystal Mackenzie E.",
           "avatar": "KM",
-          "quote": "“Sara helped me out with making sure my pets were fed and most importantly my dog had her medicine when I was out of town. My dog has seizures so it was important it was on time. She didn't fail me!!”",
+          "quote": "Sara helped me out with making sure my pets were fed and most importantly my dog had her medicine when I was out of town. My dog has seizures so it was important it was on time. She didn't fail me!!",
           "stars": 5
         },
         {
           "name": "Logan York",
           "avatar": "LY",
-          "quote": "“Always trust her with our baby Merlin. She's come over and done drop-ins for us multiple times and is always respectful of our home and our pup loves her.”",
+          "quote": "Always trust her with our baby Merlin. She's come over and done drop-ins for us multiple times and is always respectful of our home and our pup loves her.",
           "stars": 5
         }
       ]
@@ -98,7 +98,7 @@
     "pricing": {
       "badge": "Simple Pricing",
       "title": "Rates Built for Every Pet's Needs",
-      "subtitle": "Transparent, flat rates with no hidden fees. Select your package or request a custom plan below.",
+      "subtitle": "Transparent, flat rates with no hidden fees. Select your package or reach out to discuss a custom plan.",
       "plans": [
         {
           "id": "drop-in",
@@ -114,11 +114,11 @@
             { "label": "Overnight companion care", "included": false }
           ],
           "ctaText": "Book Visit",
-          "ctaHref": "#info"
+          "ctaHref": "#booking-modal"
         },
         {
           "id": "day-sitting",
-          "name": "Companion sitting",
+          "name": "Companion Sitting",
           "tagline": "Full day attention keeping your pup/kitty active and safe.",
           "priceMonthly": 55,
           "priceAnnually": 45,
@@ -132,7 +132,7 @@
           "highlighted": true,
           "badge": "Most Popular",
           "ctaText": "Book Sitting",
-          "ctaHref": "#info"
+          "ctaHref": "#booking-modal"
         },
         {
           "id": "overnight",
@@ -148,7 +148,7 @@
             { "label": "Basic house monitoring & mail collection", "included": true }
           ],
           "ctaText": "Book Overnight",
-          "ctaHref": "#info"
+          "ctaHref": "#booking-modal"
         }
       ]
     },
@@ -166,72 +166,136 @@
     {
       "slug": "pet-sitting",
       "title": "Dog & Cat Sitting",
-      "shortDescription": "Overnight care in your home or ours to keep your pet relaxed and loved.",
-      "longDescription": "We understand pets are happiest in their familiar environments. Our overnight pet sitting ensures your dog or cat keeps their standard sleeping schedule, morning walks, and feeding patterns intact.",
+      "shortDescription": "Overnight care in your home to keep your dog or cat relaxed, loved, and on routine.",
+      "longDescription": "We understand pets are happiest in their familiar environments. Our overnight pet sitting ensures your dog or cat keeps their standard sleeping schedule, morning walks, and feeding patterns intact. Sarah stays with your pet so they never feel alone.",
       "features": [
         "In-home overnight stays",
         "Feeding & watering schedules",
-        "Daily play updates",
+        "Daily play updates with photos",
         "Mail & house monitoring"
       ],
       "faq": [
         {
           "q": "Do you watch dogs and cats of all breeds?",
-          "a": "Yes, we are highly experienced with dogs and cats of all shapes, sizes, and temperaments."
+          "a": "Yes, we are highly experienced with dogs and cats of all shapes, sizes, and temperaments — from energetic puppies to senior kitties."
+        },
+        {
+          "q": "Will you stay overnight in my home?",
+          "a": "Yes. For overnight sitting we stay in your home so your pet keeps their normal routine and never feels alone in an unfamiliar place."
+        },
+        {
+          "q": "How often will I receive updates?",
+          "a": "We send photo and video updates at least twice per day — once in the morning and once in the evening — so you always know your pet is thriving."
+        },
+        {
+          "q": "What if my pet has special dietary needs?",
+          "a": "We follow your feeding instructions exactly. Whether it's raw food, portioned meals, or special recipes, we stick to the schedule you set."
+        },
+        {
+          "q": "Can you administer medications during sitting visits?",
+          "a": "Absolutely. Medication support is one of our specialties. We handle pill pockets, direct oral dosing, and timed medication schedules — including twice-daily seizure medications."
         }
       ]
     },
     {
       "slug": "dog-walking",
       "title": "Dog Walking & Outdoor Exercise",
-      "shortDescription": "Structured walking routes to keep your puppy active, healthy, and happy.",
-      "longDescription": "We provide custom dog walking packages tailored to your puppy's physical endurance and age profile. Every walk includes fresh water refills, paw wipe-downs, and a detailed check-in report with route photos.",
+      "shortDescription": "Structured walking routes to keep your pup active, healthy, and happy every day.",
+      "longDescription": "We provide custom dog walking packages tailored to your puppy's physical endurance and age profile. Every walk includes fresh water refills, paw wipe-downs after muddy outings, and a detailed check-in report with photos from the route.",
       "features": [
         "Structured 30 or 60 minute walks",
-        "Individual attention (no pack walking)",
-        "GPS trace and photo check-ins",
-        "Fresh water & treats replenishment"
+        "Individual attention — no pack walking",
+        "Photo check-ins from the route",
+        "Fresh water & treat replenishment"
       ],
       "faq": [
         {
+          "q": "Do you walk multiple dogs at once?",
+          "a": "No. We only walk one dog at a time so your pup gets our full, undivided attention throughout the entire walk."
+        },
+        {
           "q": "Do you walk dogs in bad weather?",
-          "a": "Yes, but in extreme heat or severe storms, we will pivot to indoor mental play and shorter potty breaks to safeguard your dog."
+          "a": "In extreme heat or severe storms we pivot to indoor mental enrichment games and shorter potty breaks to keep your dog safe and comfortable."
+        },
+        {
+          "q": "Can you walk puppies and senior dogs?",
+          "a": "Yes. We adjust the pace, duration, and route intensity based on your dog's age, breed, and fitness level."
+        },
+        {
+          "q": "Will you use my dog's leash and harness?",
+          "a": "Yes, always. We use whatever equipment you have set up and will never use gear your dog isn't already comfortable with."
+        },
+        {
+          "q": "How do I know the walk actually happened?",
+          "a": "You'll receive a check-in report with real-time photos from the walk as well as a brief note on your dog's mood and behavior."
         }
       ]
     },
     {
       "slug": "cat-care",
       "title": "Specialized Cat & Kitten Care",
-      "shortDescription": "Feline-focused visits covering food setups, litter box maintenance, and laser play.",
-      "longDescription": "Cats need stimulation and structured check-ins just as much as dogs. We provide specialized feline drop-ins focusing on refilling fresh water, scooping litter boxes, grooming, and interactive feather/laser play sessions.",
+      "shortDescription": "Feline-focused visits covering food, fresh water, litter box scooping, and interactive play.",
+      "longDescription": "Cats need stimulation and structured check-ins just as much as dogs — they just like to pretend they don't. We provide specialized feline drop-ins focusing on fresh water and food setup, daily litter box scooping, grooming brushes, and interactive feather and laser play to keep your cat sharp and happy.",
       "features": [
         "Fresh food & water preparation",
-        "Detailed litter box scooping",
+        "Daily litter box scooping",
         "Interactive play & socialization",
         "Supervision for senior or shy cats"
       ],
       "faq": [
         {
+          "q": "My cat is shy — will she warm up to you?",
+          "a": "Most shy cats come around quickly when they realize you're there with treats and no pressure. We let cats set the pace and never force interaction."
+        },
+        {
           "q": "How often should you visit my cat?",
-          "a": "We recommend at least one visit per day to ensure felines are safe, fed, and healthy."
+          "a": "We recommend at least once per day to ensure your cat is safe, fed, hydrated, and has a clean litter box. Twice daily is ideal for kittens or active cats."
+        },
+        {
+          "q": "Can you handle multiple cats in the same household?",
+          "a": "Yes. Multi-cat households are no problem. We keep track of each cat's feeding portion and individual temperament to make sure everyone gets the right care."
+        },
+        {
+          "q": "Will you administer medication to my cat?",
+          "a": "Yes. We are comfortable with oral medications in pill or liquid form as well as topical flea and tick treatments. We handle the job calmly and stress-free."
+        },
+        {
+          "q": "Do you bring your own toys or supplies?",
+          "a": "We always use your cat's own toys and bedding so the environment stays familiar. We do bring treats as positive reinforcement unless you specify otherwise."
         }
       ]
     },
     {
       "slug": "medication-support",
       "title": "Specialized Medication Support",
-      "shortDescription": "Certified administration of critical timed pills, injections, and medical care.",
-      "longDescription": "Our handlers are highly trained and experienced in administering complex pet medical routines. We handle twice-a-day seizure dosing timelines, insulin injections, and sub-Q fluid administration with extreme precision.",
+      "shortDescription": "Precise, on-time administration of critical timed medications for dogs and cats.",
+      "longDescription": "Our handlers are highly trained and experienced in administering complex pet medical routines. We handle twice-a-day seizure dosing timelines with strict schedule logs, insulin injections, and sub-Q fluid administration — with calm, stress-reducing techniques so your pet stays comfortable throughout.",
       "features": [
         "Strict twice-a-day timeline scheduling",
         "Insulin & Sub-Q injection experience",
         "Detailed medication administration log",
-        "Comfort and stress-free dosing methods"
+        "Calm, stress-free dosing techniques"
       ],
       "faq": [
         {
-          "q": "Are you certified to give shots?",
-          "a": "Yes, we are highly experienced in standard subcutaneous injections for diabetic and senior pets."
+          "q": "What types of medications can you administer?",
+          "a": "We handle oral pills, liquid medications via syringe, topical treatments, subcutaneous injections (insulin), and sub-Q fluids for cats with kidney disease or chronic conditions."
+        },
+        {
+          "q": "My dog has seizures — can you give his medications exactly on time?",
+          "a": "Yes, and this is something we take extremely seriously. We set strict reminders and log every dose with a timestamp so you have a complete record and complete peace of mind."
+        },
+        {
+          "q": "Do you have formal training in pet medical care?",
+          "a": "Sarah has extensive hands-on experience with critical medication routines for dogs and cats. We recommend a meet-and-greet before any medical sit so we can review your pet's full routine in person."
+        },
+        {
+          "q": "What if my pet refuses to take their medication?",
+          "a": "We are skilled in multiple pill-delivery methods — pill pockets, crushed in food, direct oral pilling, and distraction techniques. We find what works for your individual pet."
+        },
+        {
+          "q": "Will you contact me immediately if something seems off?",
+          "a": "Absolutely. If we notice any unusual behavior, lethargy, or signs of a missed dose reaction, we contact you and your vet right away. Your pet's health is our top priority."
         }
       ]
     }
@@ -274,26 +338,19 @@
       "name": "Oak Grove",
       "seoTitle": "Oak Grove KY Pet Sitting & Dog Walking Services",
       "seoDescription": "Need a reliable pet sitter in Oak Grove, KY? S&P Ring Pet Care offers experienced cat sitting, dog walking, and medical care.",
-      "intro": "Servicing S&P families in Oak Grove, KY, we deliver custom dog walking, home drop-ins, and timed seizure medication support.",
+      "intro": "Servicing families in Oak Grove, KY, we deliver custom dog walking, home drop-ins, and timed seizure medication support.",
       "ctaText": "Book Oak Grove Pet Care"
     }
   ],
-  "reviews": [
-    {
-      "author": "Ariana Cruz",
-      "location": "Clarksville, TN",
-      "rating": 5,
-      "text": "Sara took such amazing care of our pup while we were away! Highly recommend!"
-    }
-  ],
+  "reviews": [],
   "faqs": [
     {
       "q": "What medical experience do you have?",
-      "a": "Sarah is highly experienced in handling timed dosages, including twice-a-day seizure medications for dogs and cats with neurological profiles."
+      "a": "Sarah is highly experienced in handling timed dosages, including twice-a-day seizure medications for dogs and cats with neurological conditions."
     },
     {
       "q": "How do we get started?",
-      "a": "Give us a call at (931) 802-3567 or send a Facebook message to schedule an initial meet-and-greet."
+      "a": "Fill out the booking form on our site or call/text us at (931) 802-3567. We'll schedule a free meet-and-greet to go over your pet's routine."
     }
   ]
 }

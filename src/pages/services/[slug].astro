@@ -3,6 +3,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import contentData from '../../data/content.json';
 import businessData from '../../data/business.json';
 import FAQ from '../../components/FAQ.astro';
+import BookingModal from '../../components/BookingModal.astro';
 
 export async function getStaticPaths() {
   return contentData.services.map((service) => ({
@@ -36,9 +37,12 @@ const { service } = Astro.props;
         {service.shortDescription}
       </p>
       <div class="pt-4">
-        <a href={`tel:${businessData.phone}`} class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-950 bg-white hover:bg-slate-100 rounded-custom shadow-lg transition-all hover:scale-103">
-          Book Service: {businessData.phone}
-        </a>
+        <button
+          data-open-booking
+          class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-950 bg-white hover:bg-slate-100 rounded-custom shadow-lg transition-all hover:scale-103"
+        >
+          Book This Service
+        </button>
       </div>
     </div>
   </section>
@@ -92,4 +96,5 @@ const { service } = Astro.props;
   {service.faq && service.faq.length > 0 && (
     <FAQ faqsOverride={service.faq} />
   )}
+  <BookingModal />
 </MainLayout>
