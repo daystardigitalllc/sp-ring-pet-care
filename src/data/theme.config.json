@@ -1,0 +1,11 @@
+{
+  "primaryColor": "#002060",
+  "primaryColorHover": "#001848",
+  "secondaryColor": "#7ba4db",
+  "accentColor": "#fbc5c5",
+  "borderRadius": "1rem",
+  "fontFamily": "Outfit",
+  "navbarStyle": "pill",
+  "footerStyle": "big-text",
+  "darkMode": false
+}
