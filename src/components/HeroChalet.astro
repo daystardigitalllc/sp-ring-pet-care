@@ -15,7 +15,6 @@ interface Props {
   secondaryCtaText?: string;
   secondaryCtaHref?: string;
   bgImageOverride?: string;
-  bgVideoOverride?: string;
   dividerColorClass?: string; // The fill color of the mountain divider to match the next section
 }
 
@@ -23,12 +22,11 @@ const {
   eyebrowOverride,
   headingOverride,
   subtitleOverride,
-  primaryCtaText = 'See Our Services',
-  primaryCtaHref = '#services-chalet',
-  secondaryCtaText = 'Get Estimate',
-  secondaryCtaHref = '#',
+  primaryCtaText = 'See our products',
+  primaryCtaHref = '#services',
+  secondaryCtaText = 'Find us',
+  secondaryCtaHref = '#info',
   bgImageOverride,
-  bgVideoOverride,
   dividerColorClass = 'text-[#FAF9F5] fill-current' // Default warm cozy cream
 } = Astro.props;
 
@@ -38,7 +36,6 @@ const eyebrow = eyebrowOverride || data?.eyebrow || 'Artisan bakery at the foot 
 const heading = headingOverride || data?.title || 'Real bread, baked in Chamonix';
 const subtitle = subtitleOverride || data?.subtitle || 'Natural sourdough, stone-milled flour and homemade pastries, prepared every night in our town-centre bakehouse.';
 const bgImage = bgImageOverride || data?.bgImage || 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1920&q=80';
-const bgVideo = bgVideoOverride || data?.bgVideo || '';
 
 const defaultHighlights = [
   '★ 4.7 on Google',
@@ -50,21 +47,15 @@ const highlights = data?.highlights || defaultHighlights;
 
 <section class="relative min-h-[85vh] flex items-center justify-start text-white overflow-hidden py-32 select-none bg-slate-900">
   
-  <!-- Backdrop Video/Image & Overlay Layer -->
+  <!-- Backdrop Image & Overlay Layer -->
   <div class="absolute inset-0 z-0">
-    {bgVideo ? (
-      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-45">
-        <source src={bgVideo} type="video/mp4" />
-      </video>
-    ) : (
-      <img
-        src={bgImage}
-        alt="Alpine Loaf Hero"
-        class="w-full h-full object-cover opacity-45"
-        loading="eager"
-        fetchpriority="high"
-      />
-    )}
+    <img 
+      src={bgImage} 
+      alt="Alpine Loaf Hero" 
+      class="w-full h-full object-cover opacity-45" 
+      loading="eager"
+      fetchpriority="high"
+    />
     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/20"></div>
   </div>
 
@@ -100,9 +91,8 @@ const highlights = data?.highlights || defaultHighlights;
         >
           {primaryCtaText}
         </a>
-        <a
-          href={secondaryCtaHref}
-          data-open-booking
+        <a 
+          href={secondaryCtaHref} 
           class="inline-flex items-center justify-center px-6 py-3 border border-white hover:bg-white/10 text-white text-xs sm:text-sm font-bold tracking-wider rounded transition-all cursor-pointer"
         >
           {secondaryCtaText}

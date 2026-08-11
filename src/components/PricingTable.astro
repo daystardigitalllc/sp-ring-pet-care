@@ -190,8 +190,7 @@ const plans = plansOverride || data?.plans || defaultPlans;
           <!-- CTA Button -->
           <div class="pt-2">
             <a
-              href={plan.ctaHref === "#booking-modal" || !plan.ctaHref ? "#" : plan.ctaHref}
-              data-open-booking
+              href={plan.ctaHref || "#quote-funnel"}
               class:list={[
                 "block w-full py-3 text-center text-sm font-bold rounded-xl transition-all cursor-pointer",
                 plan.highlighted 

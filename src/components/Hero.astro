@@ -29,7 +29,7 @@ const bgImage = contentData.home.hero.bgImage || '/hero-bg.jpg';
     "relative overflow-hidden py-20 lg:py-36",
     isContractor ? "bg-slate-950 text-white bg-cover bg-center" : "bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white"
   ]}
-  style={layout === 'contractor' ? `background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.8)), url('${bgImage}');` : ''}
+  style={isContractor ? `background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.8)), url('${bgImage}');` : ''}
 >
   {/* Conditionally render video background for Oak City theme */}
   {layout === 'oak-city' && themeConfig.heroVideo && (
@@ -37,7 +37,7 @@ const bgImage = contentData.home.hero.bgImage || '/hero-bg.jpg';
       <source src={themeConfig.heroVideo} type="video/mp4" />
     </video>
   )}
-  {layout === 'oak-city' && (
+  {layout === 'oak-city' && themeConfig.heroVideo && (
     <div class="absolute inset-0 bg-slate-950/70 z-0"></div>
   )}
 
@@ -105,8 +105,8 @@ const bgImage = contentData.home.hero.bgImage || '/hero-bg.jpg';
                 <div>
                   <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">What service do you need?</label>
                   <select class="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border-0 rounded-lg text-sm text-slate-700 dark:text-slate-300 focus:ring-2 focus:ring-primary">
-                    {businessData.services.map((service) => (
-                      <option>{service}</option>
+                    {contentData.services.map((service) => (
+                      <option>{service.title}</option>
                     ))}
                   </select>
                 </div>
@@ -219,7 +219,7 @@ const bgImage = contentData.home.hero.bgImage || '/hero-bg.jpg';
 
         <!-- Side-by-Side CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-          <a href="#quote-funnel" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-accent hover:bg-amber-600 rounded-custom shadow-lg transition-all hover:scale-102 uppercase tracking-wide">
+          <a href="#quote-funnel" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-accent hover:brightness-90 rounded-custom shadow-lg transition-all hover:scale-102 uppercase tracking-wide">
             {ctaText}
           </a>
           <a href={`tel:${businessData.phone}`} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-transparent border-2 border-white/20 hover:bg-white/10 rounded-custom transition-all uppercase tracking-wide">

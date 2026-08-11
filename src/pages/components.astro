@@ -1,0 +1,222 @@
+---
+// src/pages/components.astro
+// Component Catalog - A visual playground to see and test all stored UI components.
+import MainLayout from '../layouts/MainLayout.astro';
+
+// Import target showcase components
+import Hero from '../components/Hero.astro';
+import HeroAnimatedEntry from '../components/HeroAnimatedEntry.astro';
+import HeroCozy from '../components/HeroCozy.astro';
+import HeroChalet from '../components/HeroChalet.astro';
+import HeroKepler from '../components/HeroKepler.astro';
+import HeroContractor from '../components/HeroContractor.astro';
+import HeroHealNet from '../components/HeroHealNet.astro';
+
+import Services from '../components/Services.astro';
+import ServicesBento from '../components/ServicesBento.astro';
+import ServicesChalet from '../components/ServicesChalet.astro';
+import PricingTable from '../components/PricingTable.astro';
+import PlansThreeTier from '../components/PlansThreeTier.astro';
+
+import CompareSlider from '../components/CompareSlider.astro';
+import CardsCarousel from '../components/CardsCarousel.astro';
+import InteractiveVideoPopup from '../components/InteractiveVideoPopup.astro';
+
+import ReviewsChalet from '../components/ReviewsChalet.astro';
+import ReviewsMarquee from '../components/ReviewsMarquee.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQNumbered from '../components/FAQNumbered.astro';
+
+// Setup Mock Data
+const mockServices = [
+  {
+    title: "Premium Care Service",
+    description: "Detailed description of a primary service offered to clients.",
+    src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80",
+    alt: "Service photo representation",
+    href: "#"
+  },
+  {
+    title: "Secondary Care Session",
+    description: "Detailed description of a secondary service offered to clients.",
+    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80",
+    alt: "Service photo representation",
+    href: "#"
+  }
+];
+
+const mockCompareItems = [
+  {
+    before: { src: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80", alt: "Before work" },
+    after: { src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80", alt: "After work" },
+    label: "Living Space Makeover"
+  }
+];
+---
+
+<MainLayout title="Component Library Catalog" description="Visual preview catalog of all stored UI components.">
+  <div class="bg-slate-950 text-white min-h-screen font-sans">
+    
+    <!-- Top Alert/Nav -->
+    <header class="border-b border-slate-900 bg-slate-950/80 sticky top-0 z-50 backdrop-blur-md px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center font-extrabold text-xs">DS</div>
+        <div>
+          <h1 class="text-sm font-bold tracking-tight">Daystar Site Factory</h1>
+          <p class="text-[10px] text-slate-500">Component Catalog & Visual Playground</p>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <a href="#heros" class="text-xs px-2.5 py-1.5 rounded-lg hover:bg-slate-900 transition-colors text-slate-400 hover:text-white">Heroes</a>
+        <a href="#services" class="text-xs px-2.5 py-1.5 rounded-lg hover:bg-slate-900 transition-colors text-slate-400 hover:text-white">Services</a>
+        <a href="#showcase" class="text-xs px-2.5 py-1.5 rounded-lg hover:bg-slate-900 transition-colors text-slate-400 hover:text-white">Showcases</a>
+        <a href="#social" class="text-xs px-2.5 py-1.5 rounded-lg hover:bg-slate-900 transition-colors text-slate-400 hover:text-white">Reviews & FAQs</a>
+      </div>
+    </header>
+
+    <!-- Header Section -->
+    <section class="py-16 text-center max-w-3xl mx-auto px-6 space-y-4">
+      <span class="text-[10px] font-extrabold uppercase tracking-widest bg-primary/20 text-accent px-3 py-1 rounded-full border border-primary/20">Design System Systematics</span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Visual component *showcase*</h2>
+      <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+        Scroll below to preview each component block loaded in the system. Components adapt dynamically to the styling custom properties (Primary, Secondary, Accent colors, and Font families) defined in your theme file.
+      </p>
+    </section>
+
+    <!-- HERO SEGMENTS -->
+    <div id="heros" class="border-t border-slate-900 pt-16">
+      <div class="px-6 mb-8 max-w-5xl mx-auto">
+        <h3 class="text-lg font-bold flex items-center gap-2 text-white"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 01. Hero & Entrance Blocks</h3>
+        <p class="text-[11px] text-slate-500">First impression banners designed to capture attention and direct user flow.</p>
+      </div>
+
+      <!-- Component Demo Wrapper -->
+      <div class="space-y-16">
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;HeroChalet /&gt; (Editorial, cozy)</div>
+          <HeroChalet 
+            eyebrowOverride="Specialized Alpine Living" 
+            headingOverride="A sanctuary in the *mountains*" 
+            subtitleOverride="Experience high-end design elements, premium wood structures, and custom architecture."
+          />
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;HeroAnimatedEntry /&gt; (Minimalist, animation-forward)</div>
+          <HeroAnimatedEntry 
+            badgeOverride="NEW RELEASE"
+            headingOverride="Stunning layout entries *made simple*"
+            subtitleOverride="Staggered word entry animations triggered via pure styling sheets."
+          />
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;HeroCozy /&gt; (Clean showcase, hardware/interior)</div>
+          <HeroCozy 
+            badgeOverride="LIFESTYLE DESIGNS"
+            headingOverride="Minimalist aesthetic for *modern spaces*"
+            subtitleOverride="Elevated product cards and soft backdrops curated for high-end digital or physical products."
+          />
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;HeroKepler /&gt; (Saturn system orbit, retro sci-fi)</div>
+          <HeroKepler 
+            badgeOverride="ASTRO ORBIT ENGINE"
+            headingOverride="Retro futuristic *universe*"
+            subtitleOverride="Neo-brutalist layouts featuring active revolving planet shadows and hand-drawn titles."
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES SEGMENTS -->
+    <div id="services" class="border-t border-slate-900 pt-16 mt-24">
+      <div class="px-6 mb-8 max-w-5xl mx-auto">
+        <h3 class="text-lg font-bold flex items-center gap-2 text-white"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 02. Services & Pricing Grids</h3>
+        <p class="text-[11px] text-slate-500">Service descriptions, grids, and billing tables.</p>
+      </div>
+
+      <div class="space-y-16">
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;ServicesBento /&gt; (Tiles, full-bleed images)</div>
+          <ServicesBento 
+            badgeOverride="BENTO TILES"
+            headingOverride="Our core *competencies*"
+            itemsOverride={mockServices}
+          />
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;ServicesChalet /&gt; (Cozy service rows)</div>
+          <ServicesChalet 
+            badgeOverride="ALPINE MATRIX"
+            headingOverride="What we *deliver*"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWCASE SEGMENTS -->
+    <div id="showcase" class="border-t border-slate-900 pt-16 mt-24">
+      <div class="px-6 mb-8 max-w-5xl mx-auto">
+        <h3 class="text-lg font-bold flex items-center gap-2 text-white"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 03. Portfolio & Showcase Blocks</h3>
+        <p class="text-[11px] text-slate-500">Before/after sweeps, lightbox videos, and interactive carousels.</p>
+      </div>
+
+      <div class="space-y-16">
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;CompareSlider /&gt; (Before / After split slider)</div>
+          <div class="max-w-4xl mx-auto py-12 px-6">
+            <CompareSlider 
+              badgeOverride="SWEEP COMPARISON"
+              headingOverride="See the transformation *live*"
+              itemsOverride={mockCompareItems}
+            />
+          </div>
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;InteractiveVideoPopup /&gt; (Video Lightbox)</div>
+          <div class="max-w-4xl mx-auto py-12 px-6">
+            <InteractiveVideoPopup 
+              badgeOverride="VIDEO TOUR"
+              headingOverride="Watch our process *unfold*"
+              thumbnailSrc="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80"
+              videoEmbedUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVIEWS & FAQS -->
+    <div id="social" class="border-t border-slate-900 pt-16 mt-24 pb-24">
+      <div class="px-6 mb-8 max-w-5xl mx-auto">
+        <h3 class="text-lg font-bold flex items-center gap-2 text-white"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 04. Social proof & FAQs</h3>
+        <p class="text-[11px] text-slate-500">Testimonials, scrolling review ribbons, and itemized accordion lists.</p>
+      </div>
+
+      <div class="space-y-16">
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;ReviewsMarquee /&gt; (Infinite scrolling row)</div>
+          <ReviewsMarquee />
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;ReviewsChalet /&gt; (Cozy testimonial bubbles)</div>
+          <ReviewsChalet 
+            badgeOverride="TESTIMONIALS"
+            headingOverride="What our clients *say*"
+          />
+        </div>
+
+        <div class="border-y border-slate-900/60 bg-slate-900/10 p-2">
+          <div class="bg-slate-900/30 px-4 py-2 border-b border-slate-900 text-[10px] text-slate-500 font-mono">Component: &lt;FAQNumbered /&gt; (Numbered accordions list)</div>
+          <FAQNumbered />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</MainLayout>
