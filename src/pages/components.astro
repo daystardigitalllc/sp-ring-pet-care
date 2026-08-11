@@ -7,6 +7,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/Header.astro';
 import NavbarPill from '../components/NavbarPill.astro';
 import NavbarSplitLogo from '../components/NavbarSplitLogo.astro';
+import NavbarBarracks from '../components/NavbarBarracks.astro';
 
 // Import target showcase components
 import Hero from '../components/Hero.astro';
@@ -16,6 +17,7 @@ import HeroChalet from '../components/HeroChalet.astro';
 import HeroKepler from '../components/HeroKepler.astro';
 import HeroContractor from '../components/HeroContractor.astro';
 import HeroHealNet from '../components/HeroHealNet.astro';
+import HeroBarracks from '../components/HeroBarracks.astro';
 
 import Services from '../components/Services.astro';
 import ServicesBento from '../components/ServicesBento.astro';
@@ -142,6 +144,30 @@ const mockCompareItems = [
           <p class="text-xs text-slate-500 mt-1">Frosted headers, floating pills, and editorial split configurations. Note: to prevent overlap in this playground, headers are shown within sandboxed bounds.</p>
         </div>
 
+        <!-- Block item: NavbarBarracks -->
+        <div class="space-y-4">
+          <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="space-y-1">
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  NavbarBarracks.astro
+                  <span class="text-[9px] font-semibold bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/10">New Block</span>
+                </h4>
+                <p class="text-xs text-slate-400">Military/gaming style header, transparent design, dropdown listings, and cart controls.</p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="text-[10px] text-slate-500 font-mono">Use key:</span>
+                <code class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800 text-xs font-mono text-accent select-all">"NavbarBarracks"</code>
+              </div>
+            </div>
+          </div>
+          <div class="border-y border-slate-900 bg-slate-950/20 py-4 relative h-28 flex items-center justify-center overflow-hidden">
+            <div class="w-full max-w-3xl scale-90 sm:scale-100">
+              <NavbarBarracks />
+            </div>
+          </div>
+        </div>
+
         <!-- Block item: NavbarPill -->
         <div class="space-y-4">
           <div class="max-w-5xl mx-auto px-6">
@@ -223,6 +249,28 @@ const mockCompareItems = [
             01. Heroes & Entrance Blocks
           </h3>
           <p class="text-xs text-slate-500 mt-1">Stunning primary banners used at the top of landing pages to capture initial leads.</p>
+        </div>
+
+        <!-- Block item: HeroBarracks -->
+        <div class="space-y-4">
+          <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="space-y-1">
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  HeroBarracks.astro
+                  <span class="text-[9px] font-semibold bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/10">New Block</span>
+                </h4>
+                <p class="text-xs text-slate-400">Military/gaming style hero layout. Left-aligned bold stenciled headings, grid bullets, and running marquee ribbon.</p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="text-[10px] text-slate-500 font-mono">Use key:</span>
+                <code class="bg-slate-950 px-2.5 py-1 rounded border border-slate-800 text-xs font-mono text-accent select-all">"HeroBarracks"</code>
+              </div>
+            </div>
+          </div>
+          <div class="border-y border-slate-900 bg-slate-950/20 py-2">
+            <HeroBarracks />
+          </div>
         </div>
 
         <!-- Block item: HeroChalet -->
